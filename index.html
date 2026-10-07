@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mobaal Business</title>
+<meta name="description" content="Mobaal Business : boutique en ligne, logiciels de gestion, plans BTP, logistique et sécurité.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230b2a4a'/%3E%3Cpath d='M18 74V30l32 30 32-30v44' fill='none' stroke='%23f5a623' stroke-width='11' stroke-linejoin='round' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+:root{--bleu:#0b2a4a;--or:#f5a623;--bg:#fff;--card:#f4f7fb;--txt:#1b2733;--mut:#566;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1620;--card:#18222f;--txt:#e6edf5;--mut:#9fb0c3;--bleu:#7fb4e8}}
+:root[data-theme="dark"]{--bg:#0e1620;--card:#18222f;--txt:#e6edf5;--mut:#9fb0c3;--bleu:#7fb4e8}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box;margin:0}
+body{font-family:system-ui,Segoe UI,Arial,sans-serif;color:var(--txt);background:var(--bg);line-height:1.6}
+header{background:#0b2a4a;position:sticky;top:env(safe-area-inset-top,0px);z-index:9}
+nav{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:10px 16px;flex-wrap:wrap;gap:8px}
+.logo{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-weight:800;font-size:1.15rem}
+.logo small{display:block;font-size:.65rem;color:var(--or);letter-spacing:2px}
+nav ul{list-style:none;display:flex;gap:14px;padding:0;flex-wrap:wrap}
+nav ul a{color:#dce6f2;text-decoration:none;font-size:.9rem}
+.hero{background:linear-gradient(135deg,#0b2a4a,#14507f);color:#fff;text-align:center;padding:64px 16px}
+.hero h1{font-size:clamp(1.7rem,5vw,2.8rem);max-width:800px;margin:0 auto 14px}
+.hero p{max-width:620px;margin:0 auto 24px;color:#dce6f2}
+.btn{display:inline-block;background:var(--or);color:#111;font-weight:700;padding:12px 22px;border-radius:30px;text-decoration:none;border:0;cursor:pointer;font:inherit;font-weight:700;margin:4px}
+.btn.wa{background:#25d366;color:#fff}.btn.g{background:#6b7a8c;color:#fff}
+section{max-width:1100px;margin:auto;padding:50px 16px}
+h2{color:var(--bleu);font-size:1.7rem}
+h2+p{color:var(--mut);margin-bottom:22px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.card{background:var(--card);border-radius:14px;padding:20px;border-top:4px solid var(--or)}
+.card .ic{font-size:2rem}.card h3{color:var(--bleu);margin:4px 0}
+.card ul{padding-left:18px;font-size:.93rem;margin:8px 0 12px}
+.card a.l{color:var(--bleu);font-weight:700;text-decoration:none}
+.card img{width:100%;height:150px;object-fit:cover;border-radius:10px;margin-bottom:8px}
+.alt{background:var(--card);max-width:none}.alt>div{max-width:1100px;margin:auto}
+.contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.tel{background:var(--bg);border-radius:12px;padding:12px 16px;margin-bottom:12px}
+.tel b{display:block;color:var(--bleu)}.tel a{margin-right:10px;font-weight:600;color:var(--bleu)}
+form{background:var(--bg);border-radius:14px;padding:18px}
+input,select,textarea{width:100%;padding:10px;margin:5px 0 10px;border:1px solid #9aa8b8;border-radius:8px;font:inherit;background:var(--bg);color:var(--txt)}
+footer{background:#0b2a4a;color:#b8c7d8;text-align:center;padding:20px 16px;font-size:.88rem}
+footer a{color:#b8c7d8;cursor:pointer;text-decoration:underline}
+.fab{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));background:#25d366;color:#fff;border-radius:50%;width:56px;height:56px;display:grid;place-items:center;font-size:1.7rem;text-decoration:none;box-shadow:0 3px 10px #0005}
+#adm{position:fixed;inset:0;background:var(--bg);overflow:auto;z-index:99;padding:16px;padding-top:calc(16px + env(safe-area-inset-top,0px))}
+#adm h3{color:var(--bleu);margin:18px 0 6px}#adm label{font-size:.85rem;color:var(--mut)}
+#adm .bx{background:var(--card);border-radius:12px;padding:12px;margin-bottom:10px}
+#adm .bar{position:sticky;top:0;background:var(--bg);padding:6px 0;z-index:2}
+</style>
+</head>
+<body>
+<header><nav>
+<a class="logo" href="#accueil">
+<svg width="44" height="44" viewBox="0 0 100 100" aria-label="Logo"><rect width="100" height="100" rx="22" fill="#fff"/><path d="M18 74V30l32 30 32-30v44" fill="none" stroke="#0b2a4a" stroke-width="11" stroke-linejoin="round" stroke-linecap="round"/><circle cx="50" cy="22" r="7" fill="#f5a623"/></svg>
+<span>MOBAAL<small>BUSINESS</small></span></a>
+<ul id="menu"></ul></nav></header>
+
+<div class="hero" id="accueil"><h1 id="slogan"></h1><p id="intro"></p>
+<a class="btn" href="#services">Nos services</a><a class="btn wa" id="hwa" target="_blank" rel="noopener">WhatsApp</a></div>
+
+<section id="services"><h2>Nos services</h2><p>Plusieurs pôles, un seul interlocuteur.</p><div class="grid" id="svc"></div></section>
+<section id="catalogue" class="alt"><div><h2>Catalogue MobaalShop</h2><p>Produits et articles disponibles.</p><div class="grid" id="prod"></div></div></section>
+
+<section id="contact"><h2>Contactez-nous</h2><p>Appelez, écrivez sur WhatsApp ou envoyez votre demande.</p>
+<div class="contact"><div id="tels"></div>
+<form onsubmit="return false">
+<label>Nom complet</label><input id="nom" required>
+<label>Téléphone</label><input id="tel" type="tel" required>
+<label>Service souhaité</label><select id="srv"></select>
+<label>Votre message</label><textarea id="msg" rows="4" required></textarea>
+<button class="btn wa" type="button" onclick="envoyer('wa')">Envoyer par WhatsApp</button>
+<button class="btn" type="button" onclick="envoyer('mail')">Envoyer par e-mail</button>
+</form></div></section>
+
+<footer><span id="foot"></span><br><a onclick="openAdmin()">Espace admin</a></footer>
+<a class="fab" id="fab" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+
+<script id="data" type="application/json">
+{
+"nom":"Mobaal Business",
+"slogan":"Une seule entreprise, tous vos besoins professionnels",
+"intro":"Boutique en ligne, logiciels de gestion, plans BTP, logistique et sécurité : Mobaal Business vous accompagne.",
+"email":"mouctarb106@gmail.com",
+"adresse":"Keur Massar, Quartier Baygnace, Dakar, Sénégal",
+"code":"mobaal2026",
+"phones":[{"l":"🇸🇳 Sénégal","n":"+221 71 122 93 03"},{"l":"🇫🇷 France","n":"+33 7 58 87 67 41"},{"l":"🇲🇦 Maroc","n":"+212 7 71 44 77 55"}],
+"services":[
+{"ic":"🛍️","t":"MobaalShop","items":["Boutique en ligne","Produits informatiques","Habillement homme et femme"]},
+{"ic":"💻","t":"Mobaal Digitale","items":["Installation GESCOM","Sage X3","SAP et tous ses modules","Sari100 Compta","Avec ou sans scanner"]},
+{"ic":"🏗️","t":"Mobaal BTP","items":["Conception de plans 2D et 3D","Devis","Métrés"]},
+{"ic":"📦","t":"Mobaal Logistique","items":["Supply chain","Gestion de stock","Expédition"]},
+{"ic":"🛡️","t":"Mobaal Sécurité","items":["Installation de caméras","Gardiennage"]}
+],
+"produits":[
+{"n":"Produits informatiques","p":"Nous consulter","img":""},
+{"n":"Vêtements homme","p":"Nous consulter","img":""},
+{"n":"Vêtements femme","p":"Nous consulter","img":""}
+]
+}
+</script>
+
+<script>
+var D=JSON.parse(document.getElementById('data').textContent);
+var $=function(i){return document.getElementById(i)};
+function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function wa(n,t){return 'https://wa.me/'+String(n).replace(/\D/g,'')+(t?'?text='+encodeURIComponent(t):'')}
+function renderAll(){
+ var p0=D.phones[0]?D.phones[0].n:'';
+ document.title=D.nom;$('slogan').textContent=D.slogan;$('intro').textContent=D.intro;
+ $('hwa').href=wa(p0,'Bonjour '+D.nom);$('fab').href=wa(p0,'Bonjour '+D.nom);
+ $('menu').innerHTML=D.services.map(function(s,i){return '<li><a href="#s'+i+'">'+esc(s.t)+'</a></li>'}).join('')+'<li><a href="#contact">Contact</a></li>';
+ $('svc').innerHTML=D.services.map(function(s,i){return '<div class="card" id="s'+i+'"><div class="ic">'+esc(s.ic)+'</div><h3>'+esc(s.t)+'</h3><ul>'+s.items.map(function(x){return '<li>'+esc(x)+'</li>'}).join('')+'</ul><a class="l" href="#contact" onclick="$(\'srv\').value=\''+esc(s.t).replace(/'/g,'')+'\'">Demander un devis →</a></div>'}).join('');
+ $('catalogue').style.display=D.produits.length?'':'none';
+ $('prod').innerHTML=D.produits.map(function(p){return '<div class="card">'+(p.img?'<img src="'+esc(p.img)+'" alt="'+esc(p.n)+'" loading="lazy">':'')+'<h3>'+esc(p.n)+'</h3><p>'+esc(p.p)+'</p><a class="l" target="_blank" rel="noopener" href="'+wa(p0,'Bonjour, je suis intéressé par : '+p.n)+'">Commander →</a></div>'}).join('');
+ var v=$('srv').value;$('srv').innerHTML=D.services.map(function(s){return '<option>'+esc(s.t)+'</option>'}).join('');if(v)$('srv').value=v;
+ $('tels').innerHTML=D.phones.map(function(p){return '<div class="tel"><b>'+esc(p.l)+'</b><a href="tel:'+esc(p.n.replace(/[^+\d]/g,''))+'">'+esc(p.n)+'</a><a target="_blank" rel="noopener" href="'+wa(p.n)+'">WhatsApp</a></div>'}).join('')+'<div class="tel"><b>✉️ E-mail</b><a href="mailto:'+esc(D.email)+'">'+esc(D.email)+'</a></div><div class="tel"><b>📍 Adresse</b>'+esc(D.adresse)+'</div>';
+ $('foot').textContent='© '+new Date().getFullYear()+' '+D.nom+' – Tous droits réservés.';
+}
+function envoyer(m){
+ var n=$('nom').value.trim(),t=$('tel').value.trim(),s=$('srv').value,g=$('msg').value.trim();
+ if(!n||!t||!g){alert('Merci de remplir tous les champs.');return}
+ var x='Bonjour '+D.nom+',\nNom : '+n+'\nTéléphone : '+t+'\nService : '+s+'\nMessage : '+g;
+ if(m==='wa')window.open(wa(D.phones[0].n,x),'_blank');
+ else location.href='mailto:'+D.email+'?subject='+encodeURIComponent('Demande – '+s)+'&body='+encodeURIComponent(x);
+}
+/* ---------- Espace admin ---------- */
+function fi(p,l,v,a){return '<label>'+l+'</label>'+(a?'<textarea rows="4" data-p="'+p+'" data-l="1">'+esc(v)+'</textarea>':'<input data-p="'+p+'" value="'+esc(v)+'">')}
+function openAdmin(){if(prompt('Code administrateur :')!==D.code)return;draw()}
+function draw(){
+ var a=$('adm');if(!a){a=document.createElement('div');a.id='adm';document.body.appendChild(a)}
+ var h='<div class="bar"><button class="btn" onclick="exporter()">💾 Exporter le site</button><button class="btn g" onclick="closeAdm()">Fermer</button></div>';
+ h+='<h3>Informations générales</h3><div class="bx">'+fi('nom','Nom',D.nom)+fi('slogan','Titre principal',D.slogan)+fi('intro','Texte d\'introduction',D.intro,1)+fi('email','E-mail',D.email)+fi('adresse','Adresse',D.adresse)+fi('code','Code admin',D.code)+'</div>';
+ h+='<h3>Téléphones / WhatsApp</h3>'+D.phones.map(function(p,i){return '<div class="bx">'+fi('phones.'+i+'.l','Libellé',p.l)+fi('phones.'+i+'.n','Numéro',p.n)+'<button class="btn g" onclick="del(\'phones\','+i+')">Supprimer</button></div>'}).join('')+'<button class="btn" onclick="add(\'phones\')">+ Numéro</button>';
+ h+='<h3>Services</h3>'+D.services.map(function(s,i){return '<div class="bx">'+fi('services.'+i+'.ic','Icône (emoji)',s.ic)+fi('services.'+i+'.t','Nom du service',s.t)+fi('services.'+i+'.items','Détails (un par ligne)',s.items.join('\n'),1)+'<button class="btn g" onclick="del(\'services\','+i+')">Supprimer</button></div>'}).join('')+'<button class="btn" onclick="add(\'services\')">+ Service</button>';
+ h+='<h3>Catalogue produits</h3>'+D.produits.map(function(p,i){return '<div class="bx">'+fi('produits.'+i+'.n','Produit',p.n)+fi('produits.'+i+'.p','Prix',p.p)+fi('produits.'+i+'.img','Lien de l\'image (https://…)',p.img)+'<button class="btn g" onclick="del(\'produits\','+i+')">Supprimer</button></div>'}).join('')+'<button class="btn" onclick="add(\'produits\')">+ Produit</button>';
+ a.innerHTML=h;
+}
+var NEW={phones:{l:'Pays',n:'+'},services:{ic:'⭐',t:'Nouveau service',items:['Détail 1']},produits:{n:'Nouveau produit',p:'Prix',img:''}};
+function add(k){D[k].push(JSON.parse(JSON.stringify(NEW[k])));draw();renderAll()}
+function del(k,i){if(confirm('Supprimer ?')){D[k].splice(i,1);draw();renderAll()}}
+function closeAdm(){var a=$('adm');if(a)a.remove()}
+document.addEventListener('input',function(e){
+ var p=e.target.dataset&&e.target.dataset.p;if(!p)return;
+ var k=p.split('.'),o=D;for(var i=0;i<k.length-1;i++)o=o[k[i]];
+ o[k[k.length-1]]=e.target.dataset.l?e.target.value.split('\n').filter(Boolean):e.target.value;
+ renderAll();
+});
+function exporter(){
+ $('data').textContent='\n'+JSON.stringify(D,null,1)+'\n';
+ var c=document.documentElement.cloneNode(true),x=c.querySelector('#adm');if(x)x.remove();
+ var html='<!DOCTYPE html>\n'+c.outerHTML,a=$('adm');
+ a.innerHTML='<div class="bar"><button class="btn g" onclick="draw()">← Retour</button></div><h3>Code du site à jour</h3><p>Sur ton site en ligne : bouton Télécharger, puis envoie le fichier <b>index.html</b> sur Cloudflare Pages. Sinon, copie ce code dans un fichier index.html.</p><button class="btn" id="dl">⬇️ Télécharger index.html</button><button class="btn wa" id="cp">📋 Copier le code</button><textarea id="out" rows="14" readonly></textarea>';
+ $('out').value=html;
+ $('dl').onclick=function(){var b=new Blob([html],{type:'text/html'}),l=document.createElement('a');l.href=URL.createObjectURL(b);l.download='index.html';l.click()};
+ $('cp').onclick=function(){var t=$('out');t.select();try{navigator.clipboard.writeText(html)}catch(e){document.execCommand('copy')}$('cp').textContent='✅ Copié'};
+}
+renderAll();
+</script>
+</body>
+</html>
